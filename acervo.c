@@ -106,12 +106,18 @@ void alterarItem(Item itens[], int total) {
 }
 
 void listarItens(Item itens[], int total) {
+    // Verifica se não há nenhum item cadastrado no acervo
     if (total == 0) {
         printf("Nenhum item no acervo.\n");
-        return;
+        return; // Retorna imediatamente pois não há nada para listar
     }
+
+    // Imprime um cabeçalho para indicar o início da listagem do acervo
     printf("===== Acervo de Gibis =====\n");
+
+    // Percorre todo o vetor de itens e imprime os dados de cada item
     for (int i = 0; i < total; i++) {
+        // Exibe o ID, a descrição e a quantidade de cada item do acervo
         printf("ID: %d | Descrição: %s | Quantidade: %d\n",
                itens[i].id, itens[i].descricao, itens[i].quantidade);
     }
